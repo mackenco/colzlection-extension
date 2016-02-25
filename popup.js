@@ -17,12 +17,18 @@ document.addEventListener('DOMContentLoaded', function() {
       i.name = 'url';
       i.value = tabs[0].url;
       f.appendChild(i);
-      
+
       var i2 = d.createElement('input');
       i2.type = 'hidden';
-      i2.name = 'finished';
-      i2.value = cb.checked;
+      i2.name = 'title';
+      i2.value = tabs[0].title;
       f.appendChild(i2);
+
+      var i3 = d.createElement('input');
+      i3.type = 'hidden';
+      i3.name = 'finished';
+      i3.value = cb.checked;
+      f.appendChild(i3);
 
       d.body.appendChild(f);
       f.submit();
