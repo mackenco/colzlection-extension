@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+  chrome.browserAction.setIcon({path: "PF.png"});
+
   var addPageButton = document.getElementById('addPage');
   var d = document;
 
@@ -31,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
       d.body.appendChild(f);
       f.submit();
+
+      chrome.browserAction.setIcon({tabId: tabs[0].id, path: "CBG.png"});
     });
   }, false);
 }, false);
