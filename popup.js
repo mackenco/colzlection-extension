@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
   var addPageButton = document.getElementById('addPage');
-  var oopsButton = document.getElementById('oops');
   var d = document;
 
   addPageButton.addEventListener('click', function() {
@@ -34,14 +33,4 @@ document.addEventListener('DOMContentLoaded', function() {
       f.submit();
     });
   }, false);
-
-  oopsButton.addEventListener('click', function() {
-    var f = d.createElement('form');
-    f.action = 'https://agile-chamber-71691.herokuapp.com/?pop=true';
-    f.method = 'post';
-
-    d.body.appendChild(f);
-    f.submit();
-  }, false);
-
 }, false);
